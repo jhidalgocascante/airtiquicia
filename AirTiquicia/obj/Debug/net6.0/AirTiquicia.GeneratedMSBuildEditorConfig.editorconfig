@@ -1,0 +1,108 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = AirTiquicia
+build_property.RootNamespace = AirTiquicia
+build_property.ProjectDir = C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Avion/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZpb25cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Avion/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZpb25cRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Avion/Guardar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZpb25cR3VhcmRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Avion/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXZpb25cTGlzdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Destinos/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub3NcRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Destinos/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub3NcRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Destinos/Guardar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub3NcR3VhcmRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Destinos/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVzdGlub3NcTGlzdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Home/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/RangoEquipaje/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZ29FcXVpcGFqZVxFZGl0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/RangoEquipaje/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZ29FcXVpcGFqZVxFbGltaW5hci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/RangoEquipaje/Guardar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZ29FcXVpcGFqZVxHdWFyZGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/RangoEquipaje/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmFuZ29FcXVpcGFqZVxMaXN0YXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Shared/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Tripulacion/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcHVsYWNpb25cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Tripulacion/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcHVsYWNpb25cRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Tripulacion/Guardar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcHVsYWNpb25cR3VhcmRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Tripulacion/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcHVsYWNpb25cTGlzdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-2y53hgjyp8

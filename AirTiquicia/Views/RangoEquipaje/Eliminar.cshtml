@@ -1,0 +1,27 @@
+﻿@model RangoEquipajeModel
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Eliminar Rango de Equipaje
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Eliminar" asp-controlller="RangoEquipaje" method = "post">
+
+          <input asp-for="CodRangoEquipaje" type="hidden" class="form-control" />   
+          
+          <div class= "alert alert-danger" role= "alert">
+              ¿Desea eliminar el Rango de Equipaje : @Html.DisplayTextFor(m => m.PesoInicio) : @Html.DisplayTextFor(m => m.PesoFin)  ?
+          </div>
+
+      <button type="submit" class="btn btn-danger">Eliminar</button>
+      <a asp-action= "Listar" asp-controller="RangoEquipaje" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+  </div>
+</div>
+

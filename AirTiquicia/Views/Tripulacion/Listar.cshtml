@@ -1,0 +1,45 @@
+﻿@model List<TripulacionModel>
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Lista Tripulación
+  </div>
+  <div class="card-body">
+     <a asp-action= "Guardar" asp-controller="Tripulacion" class="btn btn-success">Crear Nuevo</a>
+     <hr/>
+     <table class = "table table-bordered">
+         <thead>
+             <tr>
+                 <th>Codigo Tripulante</th>
+                 <th>Nombre Tripulante</th>
+                 <th>Tipo Tripulante</th>
+                 <th>Editar</th>
+             </tr>
+         </thead>
+         <tbody>
+             @foreach (var item in Model)
+             {
+                 <tr>
+                     <td>@item.CodTripulante</td>
+                     <td>@item.NombreTripulante</td>
+                     <td>@item.CodTipoTripulante</td>
+                     <td>
+                          <a asp-action= "Editar" asp-controller="Tripulacion" class="btn btn-primary" asp-route-CodTripulante= "@item.CodTripulante">Editar</a>
+                     </td>
+                     <td>
+                          <a asp-action= "Eliminar" asp-controller="Tripulacion" class="btn btn-danger" asp-route-CodTripulante= "@item.CodTripulante">Eliminar</a>
+                     </td>
+                 </tr>
+                 
+             }
+         </tbody>
+     </table>
+
+  </div>
+</div>
+
+

@@ -1,0 +1,52 @@
+﻿@model List<AvionModel>
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Lista Destinos
+  </div>
+  <div class="card-body">
+     <a asp-action= "Guardar" asp-controller="Avion" class="btn btn-success">Crear Nuevo</a>
+     <hr/>
+     <table class = "table table-bordered">
+         <thead>
+             <tr>
+                 <th>Codigo Avion</th>
+                 <th>Codigo Marca</th>
+                 <th>Modelo Avion</th>
+                 <th>Detalle Avión</th>
+                 <th>Editar</th>
+                 <th>Eliminar</th>
+             </tr>
+         </thead>
+         <tbody>
+             @foreach (var item in Model)
+             {
+                 <tr>
+                     <td>@item.CodAvion</td>
+                     <td>@item.CodMarca</td>
+                     <td>@item.ModeloAvion</td>
+                     <td>@item.DetalleAvion</td>
+
+                     <td>
+                          <a asp-action= "Editar" asp-controller="Avion" class="btn btn-primary" asp-route-CodAvion= "@item.CodAvion">Editar</a>
+                     </td>
+                     <td>
+                          <a asp-action= "Eliminar" asp-controller="Avion" class="btn btn-danger" asp-route-CodAvion= "@item.CodAvion">Eliminar</a>
+                     </td>
+                 </tr>
+                 
+             }
+         </tbody>
+     </table>
+
+  </div>
+</div>
+
+
+
+

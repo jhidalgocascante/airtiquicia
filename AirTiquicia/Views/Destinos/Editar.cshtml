@@ -1,0 +1,48 @@
+﻿@model DestinosModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Editar Destino
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Editar" asp-controlller="Destinos" method = "post">
+
+          <input asp-for="CodDestino" type="hidden" class="form-control" />
+
+      <div class="mb-3">
+        <label class="form-label">Nombre Tripulante</label>
+        <input asp-for="NombreDestino" type="text" class="form-control" />
+        <span asp-validation-for="NombreDestino" class="text-danger"> </span>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Descripción Destino</label>
+        <input asp-for="DescripcionDestino" type="text" class="form-control">
+        <span asp-validation-for="DescripcionDestino" class="text-danger"> </span>
+      </div>   
+
+      <div class="mb-3">
+        <label class="form-label">Clase</label>
+        <input asp-for="CodClase" type="text" class="form-control">
+        <span asp-validation-for="CodClase" class="text-danger"> </span>
+      </div>   
+
+      <div class="mb-3">
+        <label class="form-label">Precio Destino</label>
+        <input asp-for="ValorDestino" type="text" class="form-control">
+        <span asp-validation-for="ValorDestino" class="text-danger"> </span>
+      </div>   
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action= "Listar" asp-controller="Destinos" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+  </div>
+</div>
+

@@ -1,0 +1,45 @@
+﻿@model DestinosModel
+@{
+    ViewData["Title"] = "Guardar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Crear Destino
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Guardar" asp-controlller="Destinos" method = "post">
+
+      <div class="mb-3">
+        <label class="form-label">Nombre Destino</label>
+        <input asp-for="NombreDestino" type="text" class="form-control" />
+        <span asp-validation-for="NombreDestino" class="text-danger"> </span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Descripción Destino</label>
+        <input asp-for="DescripcionDestino" type="text" class="form-control" />
+        <span asp-validation-for="DescripcionDestino" class="text-danger"> </span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">Tipo Clase</label>
+        <input asp-for="CodClase" type="text" class="form-control">
+        <span asp-validation-for="CodClase" class="text-danger"> </span>
+      </div> 
+      <div class="mb-3">
+        <label class="form-label">Precio Destino</label>
+        <input asp-for="ValorDestino" type="text" class="form-control">
+        <span asp-validation-for="ValorDestino" class="text-danger"> </span>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action= "Listar" asp-controller="Destinos" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+  </div>
+</div>
+
+
+

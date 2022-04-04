@@ -1,0 +1,26 @@
+﻿@model TripulacionModel
+@{
+    ViewData["Title"] = "Eliminar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Eliminar Tripulación
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Eliminar" asp-controlller="Tripulacion" method = "post">
+
+          <input asp-for="CodTripulante" type="hidden" class="form-control" />   
+          
+          <div class= "alert alert-danger" role= "alert">
+              ¿Desea eliminar el tripulante : @Html.DisplayTextFor(m => m.NombreTripulante) ?
+          </div>
+
+      <button type="submit" class="btn btn-danger">Eliminar</button>
+      <a asp-action= "Listar" asp-controller="Tripulacion" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+  </div>
+</div>

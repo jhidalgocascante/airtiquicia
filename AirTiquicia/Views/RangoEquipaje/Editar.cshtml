@@ -1,0 +1,46 @@
+﻿@model RangoEquipajeModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Editar Destino
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Editar" asp-controlller="RangoEquipaje" method = "post">
+
+          <input asp-for="CodRangoEquipaje" type="hidden" class="form-control" />
+
+      <div class="mb-3">
+        <label class="form-label">Peso Inicio</label>
+        <input asp-for="PesoInicio" type="text" class="form-control" />
+        <span asp-validation-for="PesoInicio" class="text-danger"> </span>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Peso Fin</label>
+        <input asp-for="PesoFin" type="text" class="form-control">
+        <span asp-validation-for="PesoFin" class="text-danger"> </span>
+      </div>   
+
+      <div class="mb-3">
+        <label class="form-label">Precio Equipaje</label>
+        <input asp-for="ValorEquipaje" type="text" class="form-control">
+        <span asp-validation-for="ValorEquipaje" class="text-danger"> </span>
+      </div>   
+
+      <div class="mb-3">
+        <label class="form-label">Descripción Rango</label>
+        <input asp-for="DescripcionRango" type="text" class="form-control">
+        <span asp-validation-for="DescripcionRango" class="text-danger"> </span>
+      </div>   
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action= "Listar" asp-controller="RangoEquipaje" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+  </div>
+</div>

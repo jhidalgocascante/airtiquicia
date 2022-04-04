@@ -1,0 +1,44 @@
+﻿@model AvionModel
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Editar Avión
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Editar" asp-controlller="Avion" method = "post">
+
+          <input asp-for="CodAvion" type="hidden" class="form-control" />
+
+      <div class="mb-3">
+        <label class="form-label">Código Marca</label>
+        <input asp-for="CodMarca" type="text" class="form-control" />
+        <span asp-validation-for="CodMarca" class="text-danger"> </span>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Modelo Avión</label>
+        <input asp-for="ModeloAvion" type="text" class="form-control">
+        <span asp-validation-for="ModeloAvion" class="text-danger"> </span>
+      </div>   
+
+      <div class="mb-3">
+        <label class="form-label">Metalle de Avión</label>
+        <input asp-for="DetalleAvion" type="text" class="form-control">
+        <span asp-validation-for="DetalleAvion" class="text-danger"> </span>
+      </div>   
+   
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action= "Listar" asp-controller="Avion" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+  </div>
+</div>
+
+

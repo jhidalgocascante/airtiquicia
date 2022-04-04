@@ -1,0 +1,34 @@
+﻿@model TripulacionModel /*Utilizo la clase en este modelo*/
+@{
+    ViewData["Title"] = "Editar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Editar Tripulante
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Editar" asp-controlller="Tripulacion" method = "post">
+          <input asp-for="CodTripulante" type="hidden" class="form-control" />
+
+      <div class="mb-3">
+        <label class="form-label">Nombre Tripulante</label>
+        <input asp-for="NombreTripulante" type="text" class="form-control" />
+        <span asp-validation-for="NombreTripulante" class="text-danger"> </span>
+      </div>
+      <div class="mb-3">
+        <label class="form-label">CodTipoTripulante</label>
+        <input asp-for="CodTipoTripulante" type="text" class="form-control">
+        <span asp-validation-for="CodTipoTripulante" class="text-danger"> </span>
+      </div>   
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action= "Listar" asp-controller="Tripulacion" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+  </div>
+</div>
+
