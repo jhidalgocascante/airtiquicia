@@ -95,6 +95,22 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVHJpcHVsYWNpb25cTGlzdGFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Vuelo/Editar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVnVlbG9cRWRpdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Vuelo/Eliminar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVnVlbG9cRWxpbWluYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Vuelo/Guardar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVnVlbG9cR3VhcmRhci5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/Vuelo/Listar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVnVlbG9cTGlzdGFyLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/JulioHidalgoCascante/source/repos/AirTiquicia/AirTiquicia/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

@@ -1,0 +1,59 @@
+﻿@model List<VueloModel>
+@{
+    ViewData["Title"] = "Listar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="card">
+  <div class="card-header">
+    Lista Vuelos
+  </div>
+  <div class="card-body">
+     <a asp-action= "Guardar" asp-controller="Vuelo" class="btn btn-success">Crear Nuevo</a>
+     <hr/>
+     <table class = "table table-bordered">
+         <thead>
+             <tr>
+                 <th>Codigo Vuelo</th>
+                 <th>Nombre Vuelo</th>
+                 <th>Fecha Vuelo</th>
+                 <th>Duración Vuelo</th>
+                 <th>Pais Origen</th>
+                 <th>Aeropuerto Origen</th>
+                 <th>Pais Destino</th>
+                 <th>Aeropuerto Destino</th>
+                 <th>Editar</th>
+                 <th>Eliminar</th>
+             </tr>
+         </thead>
+         <tbody>
+             @foreach (var item in Model)
+             {
+                 <tr>
+                     <td>@item.CodVuelo</td>
+                     <td>@item.NombreVuelo</td>
+                     <td>@item.FechaVuelo</td>
+                     <td>@item.DuracionVuelo</td>
+                     <td>@item.PaisOrigen</td>
+                     <td>@item.AeropuertoOrigen</td>
+                     <td>@item.PaisDestino</td>
+                     <td>@item.AeropuertoDestino</td>
+
+                     <td>
+                          <a asp-action= "Editar" asp-controller="Vuelo" class="btn btn-primary" asp-route-CodVuelo= "@item.CodVuelo">Editar</a>
+                     </td>
+                     <td>
+                          <a asp-action= "Eliminar" asp-controller="Vuelo" class="btn btn-danger" asp-route-CodVuelo= "@item.CodVuelo">Eliminar</a>
+                     </td>
+                 </tr>
+                 
+             }
+         </tbody>
+     </table>
+
+  </div>
+</div>
+
+
+
+

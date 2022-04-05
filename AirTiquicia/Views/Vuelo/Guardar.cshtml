@@ -1,0 +1,70 @@
+﻿@model VueloModel
+@{
+    ViewData["Title"] = "Guardar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Crear Vuelo
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Guardar" asp-controlller="Vuelo" method = "post">
+
+      <div class="mb-3">
+        <label class="form-label">Nombre Vuelo</label>
+        <input asp-for="NombreVuelo" type="text" class="form-control" />
+        <span asp-validation-for="NombreVuelo" class="text-danger"> </span>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Fecha Vuelo</label>
+        <input asp-for="FechaVuelo" type="text" class="form-control" />
+        <span asp-validation-for="FechaVuelo" class="text-danger"> </span>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Duración Vuelo</label>
+        <input asp-for="DuracionVuelo" type="text" class="form-control">
+        <span asp-validation-for="DuracionVuelo" class="text-danger"> </span>
+      </div> 
+
+       <div class="mb-3">
+        <label class="form-label">Pais Origen</label>
+        <input asp-for="PaisOrigen" type="text" class="form-control">
+        <span asp-validation-for="PaisOrigen" class="text-danger"> </span>
+      </div> 
+
+       <div class="mb-3">
+        <label class="form-label">Aeropuerto Origen</label>
+        <input asp-for="AeropuertoOrigen" type="text" class="form-control">
+        <span asp-validation-for="AeropuertoOrigen" class="text-danger"> </span>
+      </div> 
+
+      <div class="mb-3">
+        <label class="form-label">Pais Destino</label>
+        <input asp-for="PaisDestino" type="text" class="form-control">
+        <span asp-validation-for="PaisDestino" class="text-danger"> </span>
+      </div> 
+
+       <div class="mb-3">
+        <label class="form-label">Aeropuerto Destino</label>
+        <input asp-for="AeropuertoDestino" type="text" class="form-control">
+        <span asp-validation-for="AeropuertoDestino" class="text-danger"> </span>
+      </div> 
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+      <a asp-action= "Listar" asp-controller="Vuelo" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+  </div>
+</div>
+
+
+
+
+
+
+
