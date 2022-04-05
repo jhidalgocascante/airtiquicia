@@ -1,13 +1,15 @@
 {
   "version": 2,
-  "dgSpecHash": "Xwo8wbjO9SY4nFCjiFBbWmN1ieOVeGNu9E5j9C8ednU7Gyd8gf+rLfBpe4fV0rem20PHVNTpsOZQ4VjrgaC2yA==",
+  "dgSpecHash": "ZqJA/Z+1Ftjrc9wLNrkeIVl2prkI1d+/MqZJIbRVhMf1PA8kwp6JhGgb8i2V0+c0yaKB04mQFV5xTGxctanhsA==",
   "success": true,
   "projectFilePath": "C:\\Users\\JulioHidalgoCascante\\source\\repos\\AirTiquicia\\AirTiquicia\\AirTiquicia.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\antlr\\3.4.1.9004\\antlr.3.4.1.9004.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\messagepackanalyzer\\2.1.152\\messagepackanalyzer.2.1.152.nupkg.sha512",
+    "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.aspnet.web.optimization\\1.1.3\\microsoft.aspnet.web.optimization.1.1.3.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.aspnetcore.razor.language\\6.0.0\\microsoft.aspnetcore.razor.language.6.0.0.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\5.0.0\\microsoft.bcl.asyncinterfaces.5.0.0.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.build\\17.0.0\\microsoft.build.17.0.0.nupkg.sha512",
@@ -44,6 +46,7 @@
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.templating\\6.0.2\\microsoft.visualstudio.web.codegeneration.templating.6.0.2.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.visualstudio.web.codegeneration.utils\\6.0.2\\microsoft.visualstudio.web.codegeneration.utils.6.0.2.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.visualstudio.web.codegenerators.mvc\\6.0.2\\microsoft.visualstudio.web.codegenerators.mvc.6.0.2.nupkg.sha512",
+    "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.web.infrastructure\\1.0.0\\microsoft.web.infrastructure.1.0.0.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.win32.primitives\\4.3.0\\microsoft.win32.primitives.4.3.0.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\microsoft.win32.systemevents\\4.7.0\\microsoft.win32.systemevents.4.7.0.nupkg.sha512",
@@ -154,9 +157,73 @@
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\system.threading.tasks.dataflow\\4.9.0\\system.threading.tasks.dataflow.4.9.0.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\system.threading.timer\\4.3.0\\system.threading.timer.4.3.0.nupkg.sha512",
+    "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\system.web.optimization.extensions\\1.0.3\\system.web.optimization.extensions.1.0.3.nupkg.sha512",
+    "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\system.web.optimization.less\\1.3.5\\system.web.optimization.less.1.3.5.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\system.windows.extensions\\4.7.0\\system.windows.extensions.4.7.0.nupkg.sha512",
     "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\system.xml.readerwriter\\4.3.0\\system.xml.readerwriter.4.3.0.nupkg.sha512",
-    "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512"
+    "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\system.xml.xdocument\\4.3.0\\system.xml.xdocument.4.3.0.nupkg.sha512",
+    "C:\\Users\\JulioHidalgoCascante\\.nuget\\packages\\webgrease\\1.5.2\\webgrease.1.5.2.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Antlr 3.4.1.9004\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Antlr",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.AspNet.Web.Optimization 1.1.3\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.AspNet.Web.Optimization",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"Microsoft.Web.Infrastructure 1.0.0\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "Microsoft.Web.Infrastructure",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Web.Optimization.Extensions 1.0.3\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "System.Web.Optimization.Extensions",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"System.Web.Optimization.Less 1.3.5\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "System.Web.Optimization.Less",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    },
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "El paquete \"WebGrease 1.5.2\" se restauró con \".NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8\" en lugar de la plataforma de destino del proyecto \"net6.0\". Puede que el paquete no sea totalmente compatible con el proyecto.",
+      "libraryId": "WebGrease",
+      "targetGraphs": [
+        "net6.0"
+      ]
+    }
+  ]
 }

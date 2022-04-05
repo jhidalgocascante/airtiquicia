@@ -236,3 +236,9 @@ C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\obj\Debug\net
 C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\obj\Debug\net6.0\AirTiquicia.pdb
 C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\obj\Debug\net6.0\AirTiquicia.genruntimeconfig.cache
 C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\obj\Debug\net6.0\ref\AirTiquicia.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\Antlr3.Runtime.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\System.Web.Optimization.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\Microsoft.Web.Infrastructure.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\System.Web.Optimization.Extensions.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\System.Web.Optimization.Less.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\WebGrease.dll
