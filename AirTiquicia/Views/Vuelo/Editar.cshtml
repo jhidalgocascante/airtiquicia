@@ -58,6 +58,12 @@
         <span asp-validation-for="AeropuertoDestino" class="text-danger"> </span>
       </div> 
 
+       <div class="mb-3">
+        <label class="form-label">DetalleDestino</label>
+        <input asp-for="CodDestino" type="text" class="form-control">
+        <span asp-validation-for="CodDestino" class="text-danger"> </span>
+      </div> 
+
 
       <button type="submit" class="btn btn-primary">Guardar</button>
       <a asp-action= "Listar" asp-controller="Vuelo" class="btn btn-warning">Volver a la lista</a>

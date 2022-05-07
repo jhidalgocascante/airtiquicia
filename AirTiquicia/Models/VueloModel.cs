@@ -18,5 +18,13 @@
 
         public string? AeropuertoDestino { get; set; }
 
+         public int CodDestino { get; set; }
+
+        //Corresponden a los datos que van a ser utilizados en la busqueda
+        public string? DescripcionDestino { get; set; }
+        public decimal ValorDestino { get; set; }
+        public int CodClase { get; set; }
+        public string? NombreClase { get; set; }
+
     }
 }

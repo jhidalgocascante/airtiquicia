@@ -242,3 +242,8 @@ C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net
 C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\System.Web.Optimization.Extensions.dll
 C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\System.Web.Optimization.Less.dll
 C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\WebGrease.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\Microsoft.OpenApi.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\Swashbuckle.AspNetCore.Swagger.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\bin\Debug\net6.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+C:\Users\JulioHidalgoCascante\source\repos\AirTiquicia\AirTiquicia\obj\Debug\net6.0\AirTiquicia.MvcApplicationPartsAssemblyInfo.cs
