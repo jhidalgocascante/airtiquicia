@@ -93,10 +93,15 @@ namespace AirTiquicia.Controllers
         }
 
         //Buscar vuelos
+
         public IActionResult BuscarVuelos(string DestinoBusqueda, string FechaInicio, string FechaFinal)
         {
+            string DestinoBusqueda1 = Request.Form["city"].ToString();
+            string FechaInicio1     = Request.Form["check-in"].ToString();
+            string FechaFinal1      = Request.Form["check-out"].ToString();
+
             //la vista mostrará una lista de contactos
-            var oLista = _VueloDatos.BuscarVuelos(DestinoBusqueda,FechaInicio,FechaFinal);
+            var oLista = _VueloDatos.BuscarVuelos(DestinoBusqueda1, FechaInicio1,FechaFinal1);
             return View(oLista);
         }
 

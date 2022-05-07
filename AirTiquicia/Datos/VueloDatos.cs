@@ -224,7 +224,7 @@ namespace AirTiquicia.Datos
                             PaisDestino = dr["PaisDestino"].ToString(),
                             AeropuertoDestino = dr["AeropuertoDestino"].ToString(),
                             CodDestino = Convert.ToInt32(dr["CodDestino"]),
-                            //
+                            //Detalle del tipo de clasificacion
                             DescripcionDestino = dr["DescripcionDestino"].ToString(),
                             ValorDestino = Convert.ToDecimal(dr["ValorDestino"]),
                             CodClase = Convert.ToInt32(dr["CodClase"]),

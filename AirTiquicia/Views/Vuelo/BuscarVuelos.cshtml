@@ -1,8 +1,55 @@
-﻿
+﻿@model List<VueloModel>
 @{
     ViewData["Title"] = "BuscarVuelos";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h1>BuscarVuelos</h1>
+
+<div class="card">
+  <div class="card-header">
+    Lista Vuelos Disponibles por la búsqueda
+  </div>
+  <div class="card-body">
+     <!--<a asp-action= "BuscarVuelos" asp-controller="Vuelo" class="btn btn-success">Crear Nuevo</a>-->
+     <hr/>
+     <table class = "table table-bordered">
+         <thead>
+             <tr>
+                 <th>Codigo Vuelo</th>
+                 <th>Nombre Vuelo</th>
+                 <th>Fecha Vuelo</th>
+                 <th>Duración Vuelo</th>
+                 <th>Pais Origen</th>
+                 <th>Aeropuerto Origen</th>
+                 <th>Pais Destino</th>
+                 <th>Aeropuerto Destino</th>
+                 <th>ValorDestino</th>
+                 <th>NombreClase</th>
+                 
+             </tr>
+         </thead>
+         <tbody>
+             @foreach (var item in Model)
+             {
+                 <tr>
+                     <td>@item.CodVuelo</td>
+                     <td>@item.NombreVuelo</td>
+                     <td>@item.FechaVuelo</td>
+                     <td>@item.DuracionVuelo</td>
+                     <td>@item.PaisOrigen</td>
+                     <td>@item.AeropuertoOrigen</td>
+                     <td>@item.PaisDestino</td>
+                     <td>@item.AeropuertoDestino</td>
+                     <td>@item.ValorDestino</td>
+                     <td>@item.NombreClase</td>
+                 </tr>
+             }
+         </tbody>
+     </table>
+
+      <a asp-action= "Listar" asp-controller="Vuelo" class="btn btn-warning">Volver a la lista</a>
+
+  </div>
+</div>
+
 
