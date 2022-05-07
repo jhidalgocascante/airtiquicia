@@ -339,7 +339,13 @@ CREATE TABLE VueloCalendario( CodVuelo INT identity PRIMARY KEY,
 							  PaisOrigen  VARCHAR(100),
                               AeropuertoOrigen  VARCHAR(250),
 							  PaisDestino  VARCHAR(100),
-                              AeropuertoDestino  VARCHAR(250));		
+                              AeropuertoDestino  VARCHAR(250)
+							  );		
+
+ALTER TABLE VueloCalendario ADD  CodDestino INT;
+
+ALTER TABLE VueloCalendario ADD CONSTRAINT CodDestino
+	FOREIGN KEY (CodDestino) REFERENCES Destinos(CodDestino);
 
 
 create procedure sp_listarVuelo
@@ -358,15 +364,16 @@ select * from VueloCalendario where CodVuelo = @CodVuelo
 end;
 
 
-
-create procedure sp_guardarVuelo(
+--drop procedure sp_guardarVuelo;
+create  procedure sp_guardarVuelo(
 @NombreVuelo VARCHAR(250),
 @FechaVuelo VARCHAR(50),
 @DuracionVuelo DECIMAL(6,2),
 @PaisOrigen  VARCHAR(100),
 @AeropuertoOrigen  VARCHAR(250),
 @PaisDestino  VARCHAR(100),
-@AeropuertoDestino  VARCHAR(250)
+@AeropuertoDestino  VARCHAR(250),
+@CodDestino  int
 )
 as
 begin
@@ -377,7 +384,8 @@ DuracionVuelo,
 PaisOrigen,
 AeropuertoOrigen,
 PaisDestino,
-AeropuertoDestino
+AeropuertoDestino,
+CodDestino
 ) values
 (@NombreVuelo,
 @FechaVuelo,
@@ -385,12 +393,13 @@ AeropuertoDestino
 @PaisOrigen,
 @AeropuertoOrigen,
 @PaisDestino,
-@AeropuertoDestino )
+@AeropuertoDestino,
+@CodDestino)
 
 end
 
 
-
+--drop procedure sp_editarVuelo
 create procedure sp_editarVuelo(
 @CodVuelo int,
 @NombreVuelo VARCHAR(250),
@@ -399,7 +408,8 @@ create procedure sp_editarVuelo(
 @PaisOrigen  VARCHAR(100),
 @AeropuertoOrigen  VARCHAR(250),
 @PaisDestino  VARCHAR(100),
-@AeropuertoDestino  VARCHAR(250)
+@AeropuertoDestino  VARCHAR(250),
+@CodDestino int
 )
 as
 begin
@@ -410,7 +420,8 @@ DuracionVuelo = @DuracionVuelo,
 PaisOrigen = @PaisOrigen,
 AeropuertoOrigen = @AeropuertoOrigen,
 PaisDestino = @PaisDestino,
-AeropuertoDestino = @AeropuertoDestino
+AeropuertoDestino = @AeropuertoDestino,
+CodDestino = @CodDestino
 where CodVuelo = @CodVuelo
 
 end
@@ -425,3 +436,35 @@ delete from VueloCalendario
 where CodVuelo = @CodVuelo
 
 end
+
+
+
+
+-------drop procedure sp_buscarVuelos
+create procedure sp_buscarVuelos(
+@DestinoBusqueda VARCHAR(100),
+@FechaInicio VARCHAR(50),
+@FechaFinal VARCHAR(50)
+)
+as
+begin
+	 SELECT [CodVuelo]
+      ,[NombreVuelo]
+      ,[FechaVuelo]
+      ,[DuracionVuelo]
+      ,[PaisOrigen]
+      ,[AeropuertoOrigen]
+      ,[PaisDestino]
+      ,[AeropuertoDestino]
+	  ,[VueloCalendario].[CodDestino]
+	  ,[Destinos].[DescripcionDestino]
+	  ,[Destinos].[ValorDestino]
+	  ,[Destinos].[CodClase]
+	  ,[TipoClase].NombreClase
+  FROM [AIRTIQUICIA].[dbo].[VueloCalendario], [AIRTIQUICIA].[dbo].[Destinos],
+       [AIRTIQUICIA].[dbo].[TipoClase]
+  WHERE [PaisDestino] like '%'+@DestinoBusqueda+'%'
+     and ( (FechaVuelo >= cast(@FechaInicio as date)) and (FechaVuelo <= cast(@FechaFinal as date)))
+	 and [Destinos].[CodDestino] = [VueloCalendario].[CodDestino]
+	 and [TipoClase].CodClase = [Destinos].[CodClase]
+end;
