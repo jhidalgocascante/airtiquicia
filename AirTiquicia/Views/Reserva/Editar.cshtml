@@ -1,8 +1,6 @@
-﻿
-@model ReservaModel
-
+﻿@model ReservaModel
 @{
-    ViewData["Title"] = "Guardar";
+    ViewData["Title"] = "Editar";
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
@@ -13,17 +11,23 @@
   </div>
   <div class="card-body">
    
-      <form asp-action= "Guardar" asp-controlller="Reserva" method = "post">
+      <form asp-action= "Editar" asp-controlller="Reserva" method = "post">
 
-          <input asp-for="CodVuelo" type="hidden" class="form-control" />
+          <input asp-for="CodReserva" type="hidden" class="form-control" />
 
            <div class= "alert alert-danger" role= "alert">
             Nombre Vuelo  @Html.DisplayTextFor(m => m.NombreVuelo) 
             Fecha Vuelo  @Html.DisplayTextFor(m => m.FechaVuelo) 
-            Fecha Vuelo  @Html.DisplayTextFor(m => m.FechaVuelo) 
-            Monto  @Html.DisplayTextFor(m => m.ValorDestino) 
+            PaisDestino  @Html.DisplayTextFor(m => m.PaisDestino) 
+            DescripcionDestino  @Html.DisplayTextFor(m => m.DescripcionDestino) 
+            NombreClase  @Html.DisplayTextFor(m => m.NombreClase) 
           </div>
 
+      <div class="mb-3">
+        <label class="form-label">Código de Vuelo</label>
+        <input asp-for="CodVuelo" type="text" class="form-control">
+        <span asp-validation-for="CodVuelo" class="text-danger"> </span>
+      </div> 
 
       <div class="mb-3">
         <label class="form-label">Cantidad de Ocupantes</label>
@@ -51,7 +55,7 @@
 
      <div class="mb-3">
         <label class="form-label">Monto Total Tiquete</label>
-        <input asp-for="MonTotal" type="text" class="form-control" value="@Html.DisplayTextFor(m => m.ValorDestino)"> 
+        <input asp-for="MonTotal" type="text" class="form-control"> 
         <span asp-validation-for="MonTotal" class="text-danger"> </span>
       </div> 
 
@@ -103,4 +107,6 @@
 
   </div>
 </div>
+
+
 

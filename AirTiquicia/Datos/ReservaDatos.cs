@@ -42,7 +42,13 @@ namespace AirTiquicia.Datos
                             FecNacimiento = dr["FecNacimiento"].ToString(),
                             DesCorreo = dr["DesCorreo"].ToString(),
                             NumTelefono = dr["NumTelefono"].ToString(),
-
+                            //
+                            NombreVuelo = dr["NombreVuelo"].ToString(),
+                            FechaVuelo = dr["FechaVuelo"].ToString(),
+                            PaisDestino = dr["PaisDestino"].ToString(),
+                            DescripcionDestino = dr["DescripcionDestino"].ToString(),
+                            ValorDestino = Convert.ToDecimal(dr["ValorDestino"]),
+                            NombreClase = dr["NombreClase"].ToString(),
 
                         });
 
@@ -80,13 +86,19 @@ namespace AirTiquicia.Datos
                         oReserva.MonTiquete = Convert.ToDecimal(dr["MonTiquete"]);
                         oReserva.MonEquipaje = Convert.ToDecimal(dr["MonEquipaje"]);
                         oReserva.MonTotal = Convert.ToDecimal(dr["MonTotal"]);
-                        //
                         oReserva.NumIdentificacion = dr["NumIdentificacion"].ToString();
                         oReserva.NomIdentificacion = dr["NomIdentificacion"].ToString();
                         oReserva.ApeIdentificacion = dr["ApeIdentificacion"].ToString();
                         oReserva.FecNacimiento = dr["FecNacimiento"].ToString();
                         oReserva.DesCorreo = dr["DesCorreo"].ToString();
                         oReserva.NumTelefono = dr["NumTelefono"].ToString();
+                        //
+                        oReserva.NombreVuelo = dr["NombreVuelo"].ToString();
+                        oReserva.FechaVuelo = dr["FechaVuelo"].ToString();
+                        oReserva.PaisDestino = dr["PaisDestino"].ToString();
+                        oReserva.DescripcionDestino = dr["DescripcionDestino"].ToString();
+                        oReserva.ValorDestino = Convert.ToDecimal(dr["ValorDestino"]);
+                        oReserva.NombreClase = dr["NombreClase"].ToString();
 
                     };
 

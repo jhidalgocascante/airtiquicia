@@ -17,13 +17,12 @@
              <tr>
                  <th>Codigo Reserva</th>
                  <th>Codigo Vuelo</th>
-                 <th>Nombre Vuelo</th>
                  <th>Fecha Vuelo</th>
-                 <th>Duración Vuelo</th>
-                 <th>Pais Origen</th>
-                 <th>Aeropuerto Origen</th>
-                 <th>Pais Destino</th>
-                 <th>Aeropuerto Destino</th>
+                 <th>Destino</th>
+                 <th>Descripcion Vuelo</th>
+                 <th>Ocupantes</th>
+                 <th>Monto Total</th>
+                 <th>Identificacion</th>
                  <th>Editar</th>
                  <th>Eliminar</th>
              </tr>
@@ -34,9 +33,12 @@
                  <tr>
                      <td>@item.CodReserva</td>
                      <td>@item.CodVuelo</td>
-                     <td>@item.NombreVuelo</td>
                      <td>@item.FechaVuelo</td>
                      <td>@item.PaisDestino</td>
+                     <td>@item.DescripcionDestino</td>
+                     <td>@item.NumOcupantes</td>
+                     <td>@item.MonTotal</td>
+                     <td>@item.NomIdentificacion @item.ApeIdentificacion</td>
 
                      <td>
                           <a asp-action= "Editar" asp-controller="Reserva" class="btn btn-primary" asp-route-CodReserva= "@item.CodReserva">Editar</a>

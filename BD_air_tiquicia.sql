@@ -492,20 +492,69 @@ ALTER TABLE Reserva ADD CONSTRAINT CodVuelo
 	FOREIGN KEY (CodVuelo) REFERENCES VueloCalendario(CodVuelo);
 
 
-
+--drop procedure sp_listarReserva
 create procedure sp_listarReserva
 as
 begin
-select * from Reserva
+ SELECT [Reserva].[CodReserva],
+       [Reserva].[CodVuelo],
+        [Reserva].[NumOcupantes], 
+        [Reserva].[NumKilosEquipaje], 
+        [Reserva].[MonTiquete], 
+        [Reserva].[MonEquipaje], 
+        [Reserva].[MonTotal], 
+        [Reserva].[NumIdentificacion],
+        [Reserva].[NomIdentificacion],
+        [Reserva].[ApeIdentificacion],
+        [Reserva].[FecNacimiento],
+        [Reserva].[DesCorreo],
+        [Reserva].[NumTelefono],
+		[VueloCalendario].[NombreVuelo] ,
+        [VueloCalendario].[FechaVuelo],
+        [VueloCalendario].[PaisDestino],
+	  [Destinos].[DescripcionDestino],
+	  [Destinos].[ValorDestino],
+        [TipoClase].NombreClase
+  FROM [AIRTIQUICIA].[dbo].[VueloCalendario], [AIRTIQUICIA].[dbo].[Destinos],
+       [AIRTIQUICIA].[dbo].[TipoClase],[AIRTIQUICIA].[dbo].[Reserva]
+  WHERE [Destinos].[CodDestino] = [VueloCalendario].[CodDestino]
+	 and [TipoClase].CodClase = [Destinos].[CodClase]
+	 and [Reserva].codVuelo = [VueloCalendario].[CodVuelo];
 
 end;
 
+--drop procedure sp_obtenerReserva
 create procedure sp_obtenerReserva(
 @CodReserva int
 )
 as
 begin
-select * from Reserva where CodReserva = @CodReserva
+SELECT [Reserva].[CodReserva],
+       [Reserva].[CodVuelo],
+        [Reserva].[NumOcupantes], 
+        [Reserva].[NumKilosEquipaje], 
+        [Reserva].[MonTiquete], 
+        [Reserva].[MonEquipaje], 
+        [Reserva].[MonTotal], 
+        [Reserva].[NumIdentificacion],
+        [Reserva].[NomIdentificacion],
+        [Reserva].[ApeIdentificacion],
+        [Reserva].[FecNacimiento],
+        [Reserva].[DesCorreo],
+        [Reserva].[NumTelefono],
+		[VueloCalendario].[NombreVuelo] ,
+        [VueloCalendario].[FechaVuelo],
+        [VueloCalendario].[PaisDestino],
+	  [Destinos].[DescripcionDestino],
+	  [Destinos].[ValorDestino],
+        [TipoClase].NombreClase
+  FROM [AIRTIQUICIA].[dbo].[VueloCalendario], [AIRTIQUICIA].[dbo].[Destinos],
+       [AIRTIQUICIA].[dbo].[TipoClase],[AIRTIQUICIA].[dbo].[Reserva]
+  WHERE [Reserva].[CodReserva] = @CodReserva
+    and [Destinos].[CodDestino] = [VueloCalendario].[CodDestino]
+	 and [TipoClase].CodClase = [Destinos].[CodClase]
+	 and [Reserva].codVuelo = [VueloCalendario].[CodVuelo];
+
 end;
 
 
