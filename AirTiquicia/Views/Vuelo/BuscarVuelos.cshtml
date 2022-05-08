@@ -84,7 +84,8 @@
                               <li>Tipo: @item.NombreVuelo</li>
                               <li>Precio: @item.ValorDestino</li>
                             </ul>
-                            <button type="button" class="btn btn-lg btn-block btn-outline-primary">Seleccionar</button>
+                            <!--<button type="button" class="btn btn-lg btn-block btn-outline-primary">Seleccionar</button>-->
+                            <a asp-action= "Guardar" asp-controller="Reserva" class="btn btn-lg btn-block btn-outline-primary" asp-route-CodVuelo= "@item.CodVuelo">Seleccionar</a>
                           </div>
 
                         </div>

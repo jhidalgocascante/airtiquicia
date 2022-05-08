@@ -1,0 +1,103 @@
+﻿
+@model ReservaModel
+
+@{
+    ViewData["Title"] = "Guardar";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<div class="card">
+  <div class="card-header">
+    Generar Reserva
+  </div>
+  <div class="card-body">
+   
+      <form asp-action= "Guardar" asp-controlller="Reserva" method = "post">
+
+          <input asp-for="CodVuelo" type="hidden" class="form-control" />
+
+           <div class= "alert alert-danger" role= "alert">
+            Nombre Vuelo  @Html.DisplayTextFor(m => m.NombreVuelo) 
+            Fecha Vuelo  @Html.DisplayTextFor(m => m.FechaVuelo) 
+          </div>
+
+      <div class="mb-3">
+        <label class="form-label">Cantidad de Ocupantes</label>
+        <input asp-for="NumOcupantes" type="text" class="form-control">
+        <span asp-validation-for="NumOcupantes" class="text-danger"> </span>
+      </div> 
+
+     <div class="mb-3">
+        <label class="form-label">Peso equipaje</label>
+        <input asp-for="NumKilosEquipaje" type="text" class="form-control">
+        <span asp-validation-for="NumKilosEquipaje" class="text-danger"> </span>
+      </div> 
+
+     <div class="mb-3">
+        <label class="form-label">Monto por Equipaje</label>
+        <input asp-for="MonEquipaje" type="text" class="form-control">
+        <span asp-validation-for="MonEquipaje" class="text-danger"> </span>
+      </div> 
+
+     <div class="mb-3">
+        <label class="form-label">Valor Preliminar Tiquete</label>
+        <input asp-for="MonTiquete" type="text" class="form-control">
+        <span asp-validation-for="MonTiquete" class="text-danger"> </span>
+      </div> 
+
+     <div class="mb-3">
+        <label class="form-label">Monto Total Tiquete</label>
+        <input asp-for="MonTotal" type="text" class="form-control">
+        <span asp-validation-for="MonTotal" class="text-danger"> </span>
+      </div> 
+
+     <div class="mb-3">
+        <label class="form-label">Identificación</label>
+        <input asp-for="NumIdentificacion" type="text" class="form-control">
+        <span asp-validation-for="NumIdentificacion" class="text-danger"> </span>
+      </div> 
+
+     <div class="mb-3">
+        <label class="form-label">Nombre de Cliente</label>
+        <input asp-for="NomIdentificacion" type="text" class="form-control">
+        <span asp-validation-for="NomIdentificacion" class="text-danger"> </span>
+      </div> 
+
+           <div class="mb-3">
+        <label class="form-label">Apellido Cliente</label>
+        <input asp-for="ApeIdentificacion" type="text" class="form-control">
+        <span asp-validation-for="ApeIdentificacion" class="text-danger"> </span>
+      </div> 
+
+           <div class="mb-3">
+        <label class="form-label">Fecha de Nacimiento</label>
+        <input asp-for="FecNacimiento" type="text" class="form-control">
+        <span asp-validation-for="FecNacimiento" class="text-danger"> </span>
+      </div> 
+
+           <div class="mb-3">
+        <label class="form-label">Correo Electrónico</label>
+        <input asp-for="DesCorreo" type="text" class="form-control">
+        <span asp-validation-for="DesCorreo" class="text-danger"> </span>
+      </div> 
+
+           <div class="mb-3">
+        <label class="form-label">Número de teléfono</label>
+        <input asp-for="NumTelefono" type="text" class="form-control">
+        <span asp-validation-for="NumTelefono" class="text-danger"> </span>
+      </div> 
+
+
+      <button type="submit" class="btn btn-primary">Guardar</button>
+
+      <a asp-action= "Listar" asp-controller="Reserva" class="btn btn-warning">Volver a la lista</a>
+    </form>
+
+
+
+
+
+  </div>
+</div>
+

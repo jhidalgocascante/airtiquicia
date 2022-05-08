@@ -20,5 +20,16 @@
         public string? NumTelefono { get; set; }
 
 
+
+        //Corresponden a los datos que van a ser utilizados en la busqueda
+        //No son campos de la tabla como tal
+        public string? NombreVuelo { get; set; }
+        public string? FechaVuelo { get; set; }
+        public string? PaisDestino { get; set; } 
+        public string? DescripcionDestino { get; set; }
+        public decimal ValorDestino { get; set; }
+        public string? NombreClase { get; set; }
+
+
     }
 }

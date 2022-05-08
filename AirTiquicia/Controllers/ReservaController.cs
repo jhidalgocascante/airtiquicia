@@ -7,6 +7,7 @@ namespace AirTiquicia.Controllers
     public class ReservaController : Controller
     {
         ReservaDatos _ReservaDatos = new ReservaDatos();
+        VueloDatos _VueloDatos = new VueloDatos();
 
         public IActionResult Listar()
         {
@@ -16,10 +17,22 @@ namespace AirTiquicia.Controllers
         }
 
 
-        public IActionResult Guardar()
+        public IActionResult Guardar(int CodVuelo)
         {
             //Devolver solo la vista formato hmtml
-            return View();
+            //return View();
+
+            //string DestinoBusqueda1 = Request.Form["city"].ToString();
+            //string FechaInicio1 = Request.Form["check-in"].ToString();
+            //string FechaFinal1 = Request.Form["check-out"].ToString();
+
+            //la vista mostrará una lista de contactos
+            var oVuelo = _ReservaDatos.ObtenerDetalleVuelo(CodVuelo);
+            return View(oVuelo);
+
+            //VueloModel ObtenerDetalleVuelo(int CodVuelo)
+
+
         }
 
         [HttpPost]

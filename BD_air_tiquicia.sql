@@ -600,3 +600,33 @@ delete from Reserva
 where CodReserva = @CodReserva
 
 end
+
+
+
+
+--
+-------drop procedure sp_buscarVuelos
+create procedure sp_buscarDetalleVuelo(
+@CodVuelo int
+)
+as
+begin
+	 SELECT [CodVuelo]
+      ,[NombreVuelo]
+      ,[FechaVuelo]
+      ,[DuracionVuelo]
+      ,[PaisOrigen]
+      ,[AeropuertoOrigen]
+      ,[PaisDestino]
+      ,[AeropuertoDestino]
+	  ,[VueloCalendario].[CodDestino]
+	  ,[Destinos].[DescripcionDestino]
+	  ,[Destinos].[ValorDestino]
+	  ,[Destinos].[CodClase]
+	  ,[TipoClase].NombreClase
+  FROM [AIRTIQUICIA].[dbo].[VueloCalendario], [AIRTIQUICIA].[dbo].[Destinos],
+       [AIRTIQUICIA].[dbo].[TipoClase]
+  WHERE [VueloCalendario].[CodVuelo] = @CodVuelo
+	 and [Destinos].[CodDestino] = [VueloCalendario].[CodDestino]
+	 and [TipoClase].CodClase = [Destinos].[CodClase]
+end;

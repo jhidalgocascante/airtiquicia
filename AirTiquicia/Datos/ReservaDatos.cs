@@ -214,7 +214,45 @@ namespace AirTiquicia.Datos
             return rpta;
         }
 
-       
+        //Detakke de Vuelo
+        public ReservaModel ObtenerDetalleVuelo(int CodVuelo)
+        {
+
+            var oVuelo = new ReservaModel();
+
+            var cn = new Conexion();
+
+
+            using (var conexion = new SqlConnection(cn.getCadenaSQL()))
+            {
+                conexion.Open();
+                SqlCommand cmd = new SqlCommand("sp_buscarDetalleVuelo", conexion);
+                cmd.Parameters.AddWithValue("CodVuelo", @CodVuelo);
+                cmd.CommandType = CommandType.StoredProcedure;
+
+                using (var dr = cmd.ExecuteReader())
+                {
+
+                    while (dr.Read())
+                    {
+
+                        oVuelo.CodVuelo = Convert.ToInt32(dr["CodVuelo"]);
+                        oVuelo.NombreVuelo = dr["NombreVuelo"].ToString();
+                        oVuelo.FechaVuelo = dr["FechaVuelo"].ToString();
+                        oVuelo.PaisDestino = dr["PaisDestino"].ToString();
+                        //Detalle del tipo de clasificacion
+                        oVuelo.DescripcionDestino = dr["DescripcionDestino"].ToString();
+                        oVuelo.ValorDestino = Convert.ToDecimal(dr["ValorDestino"]);
+                        oVuelo.NombreClase = dr["NombreClase"].ToString();
+
+    };
+                }
+            }
+            return oVuelo;
+        }
+
+
+
 
 
 
