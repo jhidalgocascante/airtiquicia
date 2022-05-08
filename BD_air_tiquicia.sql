@@ -468,3 +468,135 @@ begin
 	 and [Destinos].[CodDestino] = [VueloCalendario].[CodDestino]
 	 and [TipoClase].CodClase = [Destinos].[CodClase]
 end;
+
+
+
+
+CREATE TABLE Reserva(   CodReserva INT identity PRIMARY KEY,
+						CodVuelo INT,
+						NumOcupantes INT,
+						NumKilosEquipaje DECIMAL(17,2),
+						MonTiquete DECIMAL(17,2),
+						MonEquipaje DECIMAL(17,2),
+						MonTotal DECIMAL(17,2),
+						--
+						NumIdentificacion VARCHAR(60),
+						NomIdentificacion VARCHAR(100),
+						ApeIdentificacion VARCHAR(250),
+						FecNacimiento VARCHAR(20),
+						DesCorreo VARCHAR(100),
+						NumTelefono VARCHAR(30)
+							  );		
+
+ALTER TABLE Reserva ADD CONSTRAINT CodVuelo
+	FOREIGN KEY (CodVuelo) REFERENCES VueloCalendario(CodVuelo);
+
+
+
+create procedure sp_listarReserva
+as
+begin
+select * from Reserva
+
+end;
+
+create procedure sp_obtenerReserva(
+@CodReserva int
+)
+as
+begin
+select * from Reserva where CodReserva = @CodReserva
+end;
+
+
+--drop procedure sp_guardarVuelo;
+create  procedure sp_guardarReserva(
+@CodVuelo INT,
+@NumOcupantes INT,
+@NumKilosEquipaje DECIMAL(17,2),
+@MonTiquete DECIMAL(17,2),
+@MonEquipaje DECIMAL(17,2),
+@MonTotal DECIMAL(17,2),
+@NumIdentificacion VARCHAR(60),
+@NomIdentificacion VARCHAR(100),
+@ApeIdentificacion VARCHAR(250),
+@FecNacimiento VARCHAR(20),
+@DesCorreo VARCHAR(100),
+@NumTelefono VARCHAR(30)
+)
+as
+begin
+insert into Reserva(
+CodVuelo,
+NumOcupantes ,
+NumKilosEquipaje ,
+MonTiquete ,
+MonEquipaje ,
+MonTotal,
+NumIdentificacion ,
+NomIdentificacion ,
+ApeIdentificacion ,
+FecNacimiento ,
+DesCorreo ,
+NumTelefono 
+) values
+(@CodVuelo,
+@NumOcupantes ,
+@NumKilosEquipaje ,
+@MonTiquete ,
+@MonEquipaje ,
+@MonTotal,
+@NumIdentificacion ,
+@NomIdentificacion ,
+@ApeIdentificacion ,
+@FecNacimiento ,
+@DesCorreo ,
+@NumTelefono )
+
+end
+
+
+--drop procedure sp_editarVuelo
+create procedure sp_editarReserva(
+@CodReserva INT,
+@CodVuelo INT,
+@NumOcupantes INT,
+@NumKilosEquipaje DECIMAL(17,2),
+@MonTiquete DECIMAL(17,2),
+@MonEquipaje DECIMAL(17,2),
+@MonTotal DECIMAL(17,2),
+@NumIdentificacion VARCHAR(60),
+@NomIdentificacion VARCHAR(100),
+@ApeIdentificacion VARCHAR(250),
+@FecNacimiento VARCHAR(20),
+@DesCorreo VARCHAR(100),
+@NumTelefono VARCHAR(30)
+)
+as
+begin
+update Reserva
+set CodVuelo = @CodVuelo,
+NumOcupantes = @NumOcupantes,
+NumKilosEquipaje = @NumKilosEquipaje, 
+MonTiquete = @MonTiquete ,
+MonEquipaje = @MonEquipaje,
+MonTotal = @MonTotal,
+NumIdentificacion = @NumIdentificacion ,
+NomIdentificacion = @NomIdentificacion,
+ApeIdentificacion = @ApeIdentificacion ,
+FecNacimiento = @FecNacimiento ,
+DesCorreo = @DesCorreo,
+NumTelefono = @NumTelefono
+where CodReserva = @CodReserva;
+end
+
+
+create procedure sp_eliminarReserva(
+@CodReserva int
+)
+as
+begin
+delete from Reserva
+where CodReserva = @CodReserva
+
+end
