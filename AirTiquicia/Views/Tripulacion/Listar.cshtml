@@ -4,6 +4,8 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
+<link rel="stylesheet" href="~/css/bootstrap.min.css" />
+
 <div class="card">
   <div class="card-header">
     Lista Tripulación
@@ -18,6 +20,7 @@
                  <th>Nombre Tripulante</th>
                  <th>Tipo Tripulante</th>
                  <th>Editar</th>
+                 <th>Eliminar</th>
              </tr>
          </thead>
          <tbody>
@@ -28,10 +31,10 @@
                      <td>@item.NombreTripulante</td>
                      <td>@item.CodTipoTripulante</td>
                      <td>
-                          <a asp-action= "Editar" asp-controller="Tripulacion" class="btn btn-primary" asp-route-CodTripulante= "@item.CodTripulante">Editar</a>
+                       <a asp-action= "Editar" asp-controller="Tripulacion" class="btn btn-success" asp-route-CodTripulante= "@item.CodTripulante">Editar</a>
                      </td>
                      <td>
-                          <a asp-action= "Eliminar" asp-controller="Tripulacion" class="btn btn-danger" asp-route-CodTripulante= "@item.CodTripulante">Eliminar</a>
+                       <a asp-action= "Eliminar" asp-controller="Tripulacion" class="btn btn-danger" asp-route-CodTripulante= "@item.CodTripulante">Eliminar</a>
                      </td>
                  </tr>
                  
